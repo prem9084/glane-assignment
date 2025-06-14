@@ -6,6 +6,7 @@ import { connectDb } from "./db/db.js";
 import authRoute from "./routes/AuthRoute.js";
 import bookingRoute from "./routes/BookingsRoute.js";
 import listingRoute from "./routes/ListingRoute.js";
+import path from "path";
 const app = express();
 
 dotenv.config();
@@ -15,7 +16,8 @@ connectDb();
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
-app.use("/uploads", express.static("uploads"));
+const __dirname = path.resolve(); // Needed for ES Modules
+app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 // routes
 

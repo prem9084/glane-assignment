@@ -49,7 +49,7 @@ const PropertyDetail = ({ listing, onBack, onBook }) => {
             <div className="h-96 bg-gray-300 rounded-lg flex items-center justify-center mb-4">
               {listing?.images && listing?.images?.length > 0 ? (
                 <img
-                  src={`http://localhost:5000/uploads/${listing?.images[0]}`}
+                  src={`https://glane-assignment.onrender.com/uploads/${listing?.images[0]}`}
                   alt={listing.title}
                   className="w-full h-full object-cover rounded-lg"
                 />
