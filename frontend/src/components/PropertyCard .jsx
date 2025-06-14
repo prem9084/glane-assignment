@@ -10,7 +10,7 @@ const PropertyCard = ({ listing, onSelect }) => {
         <div className="h-48 bg-gray-300 flex items-center justify-center">
           {listing.images && listing.images.length > 0 ? (
             <img
-              src={`http://localhost:5000/uploads/${listing.images[0]}`}
+              src={`https://glane-assignment.onrender.com/uploads/${listing.images[0]}`}
               alt={listing.title}
               className="w-full h-full object-cover"
             />
